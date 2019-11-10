@@ -266,6 +266,7 @@ let slime = {
     },
     moveLeftInterval : null,
     startMoveLeft : () => {
+      clearInterval(slime.physics.moveLeftInterval);
       slime.physics.moveLeftInterval = setInterval(slime.collisionBox.moveLeft, 20);
     },
     stopMoveLeft : () => {
@@ -273,6 +274,7 @@ let slime = {
     },
     moveRightInterval : null,
     startMoveRight : () => {
+      clearInterval(slime.physics.moveRightInterval);
       slime.physics.moveRightInterval = setInterval(slime.collisionBox.moveRight, 20);
     },
     stopMoveRight : () => {
